@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "dgSpecHash": "aq7MxgtQ65WY23HLuZ+7E3u8Ez3zw4YkLm+98M2IgPIB0w86dvKv3uP+Cbywjvz/2+VcNTyo/5mV2+8ucreuZg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\win10\\Desktop\\deeee\\deeee.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\win10\\.nuget\\packages\\inputsimulatorplus\\1.0.7\\inputsimulatorplus.1.0.7.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.10\\microsoft.aspnetcore.connections.abstractions.7.0.10.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\7.0.10\\microsoft.aspnetcore.http.connections.client.7.0.10.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\7.0.10\\microsoft.aspnetcore.http.connections.common.7.0.10.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\7.0.10\\microsoft.aspnetcore.signalr.client.7.0.10.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\7.0.10\\microsoft.aspnetcore.signalr.client.core.7.0.10.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\7.0.10\\microsoft.aspnetcore.signalr.common.7.0.10.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\7.0.10\\microsoft.aspnetcore.signalr.protocols.json.7.0.10.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.extensions.features\\7.0.10\\microsoft.extensions.features.7.0.10.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\nefarius.vigem.client\\1.21.256\\nefarius.vigem.client.1.21.256.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "'InputSimulatorPlus 1.0.7' paketi, proje hedef çerçevesi 'net7.0' yerine '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' kullanılarak geri yüklendi. Bu paket projenizle tamamen uyumlu olmayabilir.",
+      "libraryId": "InputSimulatorPlus",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}
