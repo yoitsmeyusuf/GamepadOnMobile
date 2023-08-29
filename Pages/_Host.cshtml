@@ -1,0 +1,105 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
+@namespace deeee.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="deeee.styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.11/signalr.min.js"></script>
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+
+<body>
+    <component type="typeof(App)" render-mode="ServerPrerendered" />
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+    <script>
+        document.getElementById('connecter').addEventListener("click", connect);
+        document.getElementById('starter').addEventListener("click", start);
+        if (window.DeviceOrientationEvent && window.DeviceMotionEvent) {
+            console.log("içi");
+            window.addEventListener('deviceorientation', handleOrientation);
+
+        } else {
+            document.getElementById('orientation').textContent = "Tarayıcınız bu özelliği desteklemiyor.";
+        }
+        let starterstatus = false;
+        var connection = new signalR.HubConnectionBuilder().withUrl("/myhub").build();
+
+        connection.start().then(function () {
+            console.log("SignalR bağlantısı başlatıldı.");
+        }).catch(function (err) {
+            return console.error(err.toString());
+        });
+
+        // Eğim verilerini işleme
+        function start() {
+            starterstatus = true;
+            console.log("balla");
+
+        }
+
+        function discon() {
+            connection.invoke("Disconnecter").catch(function (err) {
+                return console.error(err.toString());
+            });
+        }
+        function connect() {
+            console.log("bastım");
+            connection.invoke("ConnectToDevice").catch(function (err) {
+                return console.error(err.toString());
+            });
+
+        }
+
+
+        function handleOrientation(event) {
+
+
+            var gamma = event.gamma;
+            // Eğim değeri
+            console.log("okeuybudaokey");
+            if (gamma != null) {
+                // Eğim değeri sunucuya gönderiliyor
+                connection.invoke("SendOrientationData", gamma).catch(function (err) {
+                    return console.error(err.toString());
+                });
+            }
+            document.getElementById('orientation').textContent = "Gamma: " + gamma;
+
+
+
+
+
+        }
+
+        connection.on("OrientationDataUpdated", function (gamma) {
+            // Sunucudan gelen güncel eğim değerini işleme
+            console.log("Sunucudan güncel eğim değeri: " + gamma);
+        });
+
+
+    </script>
+</body>
+
+</html>
